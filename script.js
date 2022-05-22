@@ -22,7 +22,6 @@ buttonAddPerson.addEventListener('click', () => {
         persons.push(new Person(personId.value, firstName.value, lastName.value, age.value))
         const list = persons.map(item => `<li>ID:${item.id} Name: ${item.firstName} Surname: ${item.lastName} Age: ${item.age}`);
         personsList.innerHTML = list;
-        getStat();
     } else {
         alert('Person with this ID is already exist');
     }
@@ -40,7 +39,7 @@ function getStat() {
     stats.innerHTML = '';
     const h2 = document.createElement('h2')
     h2.append(document.createTextNode('Stats'))
-    stats.appendChild = h2;
+    stats.appendChild(h2);
 
     const ul = document.createElement('ul')
     let li = document.createElement('li')
